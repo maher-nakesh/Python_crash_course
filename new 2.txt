@@ -1,0 +1,55 @@
+#2.1- Square Root--------------------------------
+def is_square_root(x,y):
+    if y == x**(1/2):
+        return True
+    else :
+        return  False
+		
+#2.2 - Odd elements------------------------------
+def odd_sum(n):
+    odd = 0
+    for i in range(0, n - 1):
+        if n % 2 != 0 and i <= n:
+            odd += i
+    return print(odd)
+	
+#2.3 – Square of an Integer----------------------
+def sum(d):
+    add=0
+    for i in range(0,d):
+     add+=d
+     return print((str(d)+''+'+')*d+'='+str(add))
+
+#Find sum recursively-----------------------------
+def recursive_sum(n):
+ if n <= 1:
+       return n
+   else:
+       return n + recursive_sum(n-1)
+	   
+#Count digits recursively-------------------------
+def count_digit (n):
+    if n<= 1:
+        return n
+    else :
+        count=0
+        count+=1
+        return count_digit(n)
+#reverse number-----------------------------------		
+def reverse_num(n):
+    b = 0
+    if(n > 0):
+        a = n %10
+        b = (b *10) + a
+        reverse_num(n //10)
+    return b
+	
+#3.4 - Boiling Point------------------------------
+def boiling_material(boiling_map, boiling_point):
+    materials=dict()
+    materials[boiling_map]=boiling_point
+    if materials.get(boiling_map) < (materials.get(boiling_map)//5)*100:
+        return print('not equal 5%')
+    return boiling_map
+#
+	   
